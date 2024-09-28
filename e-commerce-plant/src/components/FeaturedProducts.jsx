@@ -8,7 +8,7 @@ const FeaturedProducts = () => {
   const featuredProducts = products.slice(0, 10);
 
   const handleProductClick = (id) => {
-    navigate(`/products/${id}`);
+    navigate(`/product/${id}`);
   };
 
   return (
