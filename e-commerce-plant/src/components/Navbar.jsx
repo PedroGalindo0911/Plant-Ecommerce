@@ -9,12 +9,11 @@ const Navbar = ({ isLoggedIn, cartItems }) => {
   return (
     <nav className="bg-white p-4 flex justify-between items-center shadow-md sticky top-0 z-50">
       {/* Nombre de la tienda */}
-      <Link to="/" className="text-2xl font-bold text-green-600">Charly's Plants</Link>
+      <Link to="/" className="text-2xl font-bold text-green-800">Charly's Plants</Link>
       
       <div className="flex items-center space-x-4">
         {/* Links de navegación */}
         <Link to="/products" className="text-black hover:text-green-500">Productos</Link>
-        <Link to="/blog" className="text-black hover:text-green-500">Blog</Link>
 
         {/* Carrito de compras */}
         <div className="relative">

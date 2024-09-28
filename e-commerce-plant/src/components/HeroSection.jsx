@@ -3,12 +3,12 @@ import hangingPlant from '../images/plant1.png';
 
 const HeroSection = () => {
   return (
-    <section className="bg-white py-1">
+    <section className="bg-green-50 py-1">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         
         {/* Texto del lado izquierdo */}
         <div className="md:w-1/2 text-left">
-          <h1 className="text-4xl font-bold text-green-600 mb-4">Bienvenido a Charly's Plants</h1>
+          <h1 className="text-4xl font-bold text-green-800 mb-4">Bienvenido a Charly's Plants</h1>
           <p className="text-lg text-gray-600 mb-6">
             Descubre una gran variedad de plantas y sus cuidados, perfectas para
             tu hogar u oficina. Encuentra las plantas que mejor se adaptan a tus
