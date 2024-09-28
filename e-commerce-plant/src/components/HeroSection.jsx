@@ -3,7 +3,7 @@ import hangingPlant from '../images/plant1.png';
 
 const HeroSection = () => {
   return (
-    <section className="bg-green-50 py-1">
+    <section className="bg-white py-1">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         
         {/* Texto del lado izquierdo */}

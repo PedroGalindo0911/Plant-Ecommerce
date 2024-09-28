@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import ProductList from './pages/ProductList';
+import ProductDetail from './pages/ProductDetail';
 import Cart from './pages/Cart';
 import Navbar from './components/Navbar';
 import Login from './pages/Login';
@@ -20,6 +21,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
       </Routes>
     </Router>
   );

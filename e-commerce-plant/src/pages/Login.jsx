@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { users } from '../data';
+import bgPlant from '../images/bgplant.jpg';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -14,7 +16,7 @@ const Login = () => {
     e.preventDefault();
     setError('');
 
-    // Validar correo electrónico
+    
     if (!validateEmail(email)) {
       setError('Por favor, introduce un correo electrónico válido.');
       return;
@@ -25,12 +27,22 @@ const Login = () => {
       return;
     }
 
-    console.log('Login:', { email, password });
-    //lógica de autenticación
+    
+    const foundUser = users.find((user) => user.email === email && user.password === password);
+
+    if (foundUser) {
+      console.log('Usuario autenticado:', foundUser);
+      // Implementar Redireccionar o guardar sesión aquí
+    } else {
+      setError('Correo electrónico o contraseña incorrectos.');
+    }
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div 
+      className="flex justify-center items-center min-h-screen" 
+      style={{ backgroundImage: `url(${bgPlant})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+    >
       <form 
         onSubmit={handleSubmit} 
         className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md"

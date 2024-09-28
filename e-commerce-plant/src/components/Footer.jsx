@@ -3,7 +3,7 @@ import { faFacebook, faInstagram, faWhatsapp } from '@fortawesome/free-brands-sv
 
 const Footer = () => {
   return (
-    <footer className="bg-green-700 text-white py-8">
+    <footer className="bg-green-600 text-white py-8">
       <div className="container mx-auto px-4">
         {/* Sección de Redes Sociales */}
         <div className="flex justify-center space-x-6 mb-4">

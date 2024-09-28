@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { users } from '../data';
+import bgPlant from '../images/bgplant.jpg';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -15,13 +17,13 @@ const Register = () => {
     e.preventDefault();
     setError('');
 
-    // Validar correo electrónico
+    
     if (!validateEmail(email)) {
       setError('Por favor, introduce un correo electrónico válido.');
       return;
     }
 
-    // Validar contraseñas
+    
     if (password !== confirmPassword) {
       setError('Las contraseñas no coinciden.');
       return;
@@ -32,12 +34,22 @@ const Register = () => {
       return;
     }
 
-    console.log('Registro:', { email, password });
-    // lógica de registro
+    
+    const userExists = users.some((user) => user.email === email);
+    
+    if (userExists) {
+      setError('Este correo electrónico ya está registrado.');
+    } else {
+      users.push({ id: users.length + 1, email, password });
+      console.log('Registro exitoso:', { email, password });
+      //Implementar Redireccionar o guardar sesión aquí
+    }
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div className="flex justify-center items-center min-h-screen" 
+      style={{ backgroundImage: `url(${bgPlant})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+    >
       <form 
         onSubmit={handleSubmit} 
         className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md"
